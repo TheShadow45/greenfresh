@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenfresh - Your Local Grocery Store</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png"> </head>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
 <body>
     <header>
         <div class="container">
@@ -29,6 +30,28 @@
         </div>
     </section>
 
+    <section id="order" class="order-section">
+        <div class="container">
+            <h2>Place Your Order</h2>
+            <p>Tell us what you need, and we'll get it ready for you!</p>
+            <form id="orderForm" action="mailto:GREENFRESHORDER@GMAIL.COM?subject=Greenfresh Order&body=My name is: %0D%0AEmail: %0D%0AOrder Details:%0D%0A" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <label for="customerName">Your Name:</label>
+                    <input type="text" id="customerName" name="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerEmail">Your Email:</label>
+                    <input type="email" id="customerEmail" name="customerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderList">What would you like to order? (e.g., 2 lbs apples, 1 gallon milk, 1 loaf bread)</label>
+                    <textarea id="orderList" name="orderList" rows="10" placeholder="List your items here..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Order</button>
+            </form>
+            </div>
+    </section>
+
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Contact Us</h2>
@@ -42,6 +65,11 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
-</body>
+    <footer>
+        <div class="container">
+            <p>© 2025 Greenfresh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    </body>
 </html>
